@@ -31,13 +31,9 @@ public class AdvancedCalculator {
     
     choice = s.nextLine();
     ch = choice.charAt(0);
-    //ch = Character.toLowerCase( choice.charAt(0) );
-    //System.out.println( ch );
+    ch = Character.toLowerCase( ch );
     
-    //if ( ch != 'a' || ch != 's' || ch != 'm' || ch != 'd' ) {
-    //  System.out.println( "Error. That's not a choice. Only choose A, S, M, or D.\n" );
-    //} else {
-    
+    if ( ch == 'a' || ch == 's' || ch == 'm' || ch == 'd' ) {
       System.out.println( "Enter the first number: " );
       d1 = s.nextDouble();
       System.out.println( "Enter the second number: " );
@@ -65,7 +61,10 @@ public class AdvancedCalculator {
           System.out.println( "Error. That's not a choice. Only choose A, S, M, or D." );
       } // end of switch
       
-    //} // end of else statement
+    } else {
+      System.out.println( "Error. That's not a choice. Only choose A, S, M, or D.\n" );
+    } // end of else statement
+    
   } // end main method
   
 } // end class
